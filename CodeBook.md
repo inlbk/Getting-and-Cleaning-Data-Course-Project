@@ -114,6 +114,7 @@ The following files were unzipped and read into a data table:
 * ActivityLabels: 6 rows containing a code/activity_name pair for each activity (source:activity_labels.txt)
 
 
+
 The Features data set was used to create column names (variable names) for each of the 561 features. Next, a “Subject” column containing the subject code (integer 1-30) for each observation was added, as was an “Activity” column containing the activity code (integer 1-6) for each observation and a "DataType" column containing the word “Test” or “Training” to indicate whether the observation originated in the test or training data.
 
 The test and training data sets were then combined (by row) and the resulting merged data set was checked for duplicates. No duplicate rows were detected.
@@ -123,7 +124,7 @@ Subsequently, ALL columns with column names that contain the words “mean” or
 Next, column names were expanded to eliminate the abbreviations below. The decision was made to keep all parts of the original variable names so as not to lose information. Because this makes the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, the decision was made to not insert spaces into the variable names. However, the string “()” in some variable names was removed because it can interfere with R processing.
 
 String | Replacement
---------------------
+-------|------------
 * ^t | Time
        
 * ^f | Frequency
