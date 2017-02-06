@@ -73,11 +73,17 @@ For the code implementing these steps, please see the script run_analysis.R in t
 20. Use gsub on the column names to expand or remove the abbreviations listed below. I decided to keep all the parts of the original variable names so as not to lose information. Because this made the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, I decided not to insert spaces into the variable names. I removed the “()” in some variable names because it can interfere with R processing (because R interprets the parentheses as indicating an argument list).
 
        ^t -> Time
+       
        ^f -> Frequency
+       
        Acc -> Acceleration
+       
        Gyro -> AngularVelocity
+       
        Mag -> Magnitude
+       
        angle(t -> angle(Time
+       
        () -> removed
 
 21. Change the activity code number to an activity name and remove underscores. Example: “2” -> "Walking upstairs”.
