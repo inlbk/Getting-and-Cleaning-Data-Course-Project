@@ -139,23 +139,23 @@ Next, column names were expanded to eliminate the abbreviations below. The decis
 Lastly, the activity code number was changed to an activity name using the ActivityLabels data set, and underscores were removed. [Example: “2” -> "Walking upstairs”].  In addition, the subject code number was changed to a subject name. [Example: “1” -> "Subject 1”.]
 
 
-Intermediate data set HARmean
-=============================
+Intermediate Data Set "HARmean"
+==============================
 
-The resulting intermediate data set, called HARmean, contains 10,299 observations of 89 variables, including a “DataType” factor variable. See the section below for a list of these variables. Each row consists of one observation containing processed data collected from the embedded accelerometer and gyroscope in a subject’s Samsung Galaxy S II smartphone.  
+The resulting intermediate data set, called HARmean, contains 10,299 observations of 89 variables, including a “DataType” factor variable. See the section below for a list of these variables. Each row consists of one observation containing processed data collected from the embedded accelerometer and gyroscope in a single subject’s Samsung Galaxy S II smartphone.  
 
 The "run_analysis.R" script provides optional (commented out) code to write the intermediate data set HARmean to file if desired.
 
 
-Data set HARmeanByPair
+Data Set "HARmeanByPair"
 ============================
 
 From the intermediate data set HARmean, a final independent data set called HARmeanByPair was then created. The HARmeanByPair data set contains 88 variables whereas the HARmean data set contains 89 variables. The only difference in the variables between these two data sets is that the “DataType” variable in HARmean has been removed from HARmeanByPair because it is a factor variable and cannot be averaged.  
 
-The variables (each variable contained in one column) in HARmeanByPair are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” appear to be measured in radians.
+The variables in each column of HARmeanByPair (one variable per column) are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” appear to be measured in radians.
 
- [1] "Subject"                                               
- [2] "Activity"                                              
+ [1] "Subject"  (factor)                                             
+ [2] "Activity" (factor)                                            
  [3] "TimeBodyAcceleration-mean-X"                           
  [4] "TimeBodyAcceleration-mean-Y"                           
  [5] "TimeBodyAcceleration-mean-Z"                           
@@ -244,7 +244,7 @@ The variables (each variable contained in one column) in HARmeanByPair are liste
 [88] "angle(Z,gravityMean)"
 
 
-Instead of rows containing individual data observations, each row of HARmeanByPair contains the AVERAGE of the data in each non-factor column (see the variables listed above) for a single subject/activity pair.  Because there are 30 subjects and 6 activities, there are a total of 30 x 6 or 180 rows in HARmeanByPair, one row for each subject/activity pair.
+Instead of rows containing individual data observations, each row of HARmeanByPair contains the AVERAGE of the data in each non-factor column for a single subject/activity pair.  Because there are 30 subjects and 6 activities, there are a total of 30 x 6 or 180 rows in HARmeanByPair, one row for each subject/activity pair.
 
-The data set HARmeanByPair is written by the script "run_analysis.R" to the file directory HARdata.  It meets the principles of tidy data as explicated by Hadley Wickham, with one variable per column, one observation per row, descriptive variable names, factor column entries that are character (“Subject 1”, “Walking upstairs”) rather than integer codes, no duplicate columns and no duplicate rows, and variables stored only in columns and not in rows.
+The data set HARmeanByPair is written by the script "run_analysis.R" to the file directory HARdata.  It meets the principles of tidy data as explicated by Hadley Wickham, with one variable per column, one observation per row, descriptive variable names, factor column entries that are character names (“Subject 1”, “Walking upstairs”) instead of codes, no duplicate columns and no duplicate rows, and variables stored only in columns and not in rows.
 
