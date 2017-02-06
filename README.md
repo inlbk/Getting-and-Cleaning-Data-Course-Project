@@ -37,14 +37,14 @@ For the code implementing these steps, please see the script run_analysis.R in t
 6. Retrieve a list of the names of the files within the downloaded zip file.
 
 7. Use the list of file names to unzip the following files and read them into a data table. See the experiment README file for a more detailed description of the experimental data.
-	XTest: 2947 observations of 561 numeric experimental features
-	yTest: 2947 rows containing the integer activity code (1-6) for each XTest observation
-	SubjectTest: 2947 rows containing the integer subject code (1-30) for each XTest observation
-	XTrain: 7352 observations of 561 numeric experimental features
-	yTrain: 7352 rows containing the integer activity code (1-6) for each XTrain observation
-	SubjectTrain: 7352 rows containing the integer subject code (1-30) for each XTrain observation
-	Features: 561 rows containing the names of the features in XTest and XTrain.	
-        ActivityLabels: 6 rows containing a code/activity_name pair for each activity.
+	* XTest: 2947 observations of 561 numeric experimental features
+	* yTest: 2947 rows containing the integer activity code (1-6) for each XTest observation
+	* SubjectTest: 2947 rows containing the integer subject code (1-30) for each XTest observation
+	* XTrain: 7352 observations of 561 numeric experimental features
+	* yTrain: 7352 rows containing the integer activity code (1-6) for each XTrain observation
+	* SubjectTrain: 7352 rows containing the integer subject code (1-30) for each XTrain observation
+	* Features: 561 rows containing the names of the features in XTest and XTrain.	
+        * ActivityLabels: 6 rows containing a code/activity_name pair for each activity.
 
 8. Unlink the temporary file.
 
@@ -72,19 +72,19 @@ For the code implementing these steps, please see the script run_analysis.R in t
 
 20. Use gsub on the column names to expand or remove the abbreviations listed below. I decided to keep all the parts of the original variable names so as not to lose information. Because this made the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, I decided not to insert spaces into the variable names. I removed the “()” in some variable names because it can interfere with R processing (because R interprets the parentheses as indicating an argument list).
 
-       ^t -> Time
+       * ^t -> Time
        
-       ^f -> Frequency
+       * ^f -> Frequency
        
-       Acc -> Acceleration
+       * Acc -> Acceleration
        
-       Gyro -> AngularVelocity
+       * Gyro -> AngularVelocity
        
-       Mag -> Magnitude
+       * Mag -> Magnitude
        
-       angle(t -> angle(Time
+       * angle(t -> angle(Time
        
-       () -> removed
+       (* ) -> removed
 
 21. Change the activity code number to an activity name and remove underscores. Example: “2” -> "Walking upstairs”.
 
