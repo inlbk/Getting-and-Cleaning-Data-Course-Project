@@ -152,7 +152,8 @@ From the intermediate data set HARmean, a final independent data set called HARm
 The variables in each column of HARmeanByPair (one variable per column) are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” are measured in radians.
 
  [1] "Subject"  (factor)                                             
- [2] "Activity" (factor)                                            
+ [2] "Activity" (factor)
+ 
  [3] "TimeBodyAcceleration-mean-X"                           
  [4] "TimeBodyAcceleration-mean-Y"                           
  [5] "TimeBodyAcceleration-mean-Z"                           
