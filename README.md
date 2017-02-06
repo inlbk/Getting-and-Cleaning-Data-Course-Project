@@ -38,13 +38,20 @@ For the code implementing these steps, please see the script run_analysis.R in t
 
 7. Use the list of file names to unzip the following files and read them into a data table. See the experiment README file for a more detailed description of the experimental data.
 	* XTest: 2947 observations of 561 numeric experimental features
+	
 	* yTest: 2947 rows containing the integer activity code (1-6) for each XTest observation
+	
 	* SubjectTest: 2947 rows containing the integer subject code (1-30) for each XTest observation
+	
 	* XTrain: 7352 observations of 561 numeric experimental features
+	
 	* yTrain: 7352 rows containing the integer activity code (1-6) for each XTrain observation
+	
 	* SubjectTrain: 7352 rows containing the integer subject code (1-30) for each XTrain observation
-	* Features: 561 rows containing the names of the features in XTest and XTrain.	
-        * ActivityLabels: 6 rows containing a code/activity_name pair for each activity.
+	
+	* Features: 561 rows containing the names of the features in XTest and XTrain.
+	
+	* ActivityLabels: 6 rows containing a code/activity_name pair for each activity.
 
 8. Unlink the temporary file.
 
