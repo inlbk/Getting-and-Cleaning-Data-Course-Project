@@ -28,7 +28,7 @@ For the code implementing these steps, please see the "run_analysis.R" script in
 
 2. Clean the environment and set the working directory.
 
-3. Create a directory named HARdata into which to download the data if one does not yet exist.
+3. If it does not yet exist, create a directory named HARdata into which to download the data.
 
 4. Download the zip data file (found at the URL "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip”) into a temporary file.
 
@@ -36,7 +36,7 @@ For the code implementing these steps, please see the "run_analysis.R" script in
 
 6. Retrieve a list of the names of the files within the downloaded zip file.
 
-7. Use the list of file names to unzip the following files and read them into a data table. See the experiment README file for a more detailed description of the experimental data.
+7. Use the list of file names to unzip the following files and read them into a data table. See the experimental README file for a more detailed description of the experimental data.
 
 	* XTest: 2947 observations of 561 numeric experimental features
 	
@@ -64,7 +64,7 @@ For the code implementing these steps, please see the "run_analysis.R" script in
 
 12. Add an “Activity” column containing the activity code (integer 1-6) for each record.
 
-13. Add a "DataType" column containing “Test” or “Training” to indicate whether the record originated from the test or training data.
+13. Add a "DataType" column containing the word “Test” or “Training” to indicate whether the record originated from the test or training data.
 
 14. Check that the test and the training data sets have the same column names and record the number of rows in each data set in preparation for combining them.
 
@@ -78,7 +78,7 @@ For the code implementing these steps, please see the "run_analysis.R" script in
 
 19. Move the factor columns to the left side of the data set and sort the rows by subject, activity, and datatype.
 
-20. Use gsub on the column names to expand or remove the abbreviations listed below. I decided to keep all the parts of the original variable names so as not to lose information. Because this made the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, I decided not to insert spaces into the variable names. I removed the “()” in some variable names because it can interfere with R processing (because R interprets the parentheses as indicating an argument list).
+20. Use gsub on the column names to expand or remove the abbreviations listed below. I decided to keep all parts of the original variable names so as not to lose information. Because this made the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, I decided not to insert spaces into the variable names. I removed the “()” in some variable names because it can interfere with R processing (because R interprets the parentheses as indicating an argument list).
 
        * ^t -> Time
        
