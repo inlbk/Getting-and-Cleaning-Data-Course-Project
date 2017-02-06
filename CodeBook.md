@@ -192,7 +192,8 @@ The variables in each column of HARmeanByPair (one variable per column) are list
 [39] "TimeBodyAngularVelocityMagnitude-mean"                 
 [40] "TimeBodyAngularVelocityMagnitude-std"                  
 [41] "TimeBodyAngularVelocityJerkMagnitude-mean"             
-[42] "TimeBodyAngularVelocityJerkMagnitude-std"              
+[42] "TimeBodyAngularVelocityJerkMagnitude-std" 
+
 [43] "FrequencyBodyAcceleration-mean-X"                      
 [44] "FrequencyBodyAcceleration-mean-Y"                      
 [45] "FrequencyBodyAcceleration-mean-Z"                      
