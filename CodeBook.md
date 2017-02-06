@@ -131,7 +131,7 @@ Acc | Acceleration
 Gyro | AngularVelocity  
 Mag | Magnitude   
 angle(t | angle(Time     
-() | removed
+() | -removed-
 
 Lastly, the activity code number was changed to an activity name using the ActivityLabels data set, and underscores were removed. [Example: “2” -> "Walking upstairs”].  In addition, the subject code number was changed to a subject name. [Example: “1” -> "Subject 1”.]
 
