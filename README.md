@@ -15,9 +15,9 @@ A full description of the project and the data is available at the site where th
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.  
 In addition, a README file describing the experiments and the raw data can be found in the zip file available at URL "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip”.
 
-The run_analysis.R script first creates an intermediate internal tidy data set, called HARmean, containing all data measurements that involve mean and standard deviation. From this intermediate data set, a second tidy data set, called HARmeanByPair, is created that summarizes the first data set.  HARmeanByPair contains the average, by subject/activity pair, of each variable in the first data set.  The run_analysis.R script writes to the current directory a textfile containing the HARmeanByPair tidy data set. The HARmean tidy data set is not written to file, although a commented-out line of code has been provided to do so should the user wish it.
+The run_analysis.R script first creates an intermediate internal tidy data set, called HARmean, containing all data measurements that involve mean and standard deviation. From this intermediate data set, a second tidy data set, called HARmeanByPair, is created that summarizes the first data set.  HARmeanByPair contains the average, by subject/activity pair, of each variable in the first data set.  The run_analysis.R script writes to the current directory a textfile containing the HARmeanByPair tidy data set. The intermediate HARmean tidy data set is not written to file, although a commented-out line of code has been provided to do so should the user wish it.
 
-The run_analysis.R script for tidying the downloaded data is extensively documented within the code itself. In addition, a description of each step undertaken to transform and clean up the data is provided below. A description of the resulting variables and data can be found in the CodeBook.md document. 
+The run_analysis.R script for tidying the downloaded data is extensively documented within the code itself. In addition, a description of each step undertaken to transform and clean up the data is provided below. A description of the resulting variables and data can be found in the CodeBook.md document in this repository. 
 
 Data Tidying Steps in "run_analysis.R"
 =====================================================
@@ -91,7 +91,7 @@ For the code implementing these steps, please see the script run_analysis.R in t
        
        * angle(t -> angle(Time
        
-       (* ) -> removed
+       * () -> removed
 
 21. Change the activity code number to an activity name and remove underscores. Example: “2” -> "Walking upstairs”.
 
@@ -107,7 +107,7 @@ For the code implementing these steps, please see the script run_analysis.R in t
 Description of Tidy Data Set
 ============================
 
-See the CodeBook.md file for a description of the data in the HARmeanByPair tidy data set.
+HARmeanByPair contains the average, computed by subject/activity pair, of each variable containing mean or standard deviation information found in the online data at URL http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. See the CodeBook.md document for a detailed description of the data in the HARmeanByPair tidy data set.
 
 
 
