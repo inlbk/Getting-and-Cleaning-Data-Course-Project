@@ -1,7 +1,7 @@
 CODE BOOK
 =========================================
 
-This code book describes the content of the data set HARmeanByPair, as well as the steps taken to create and tidy the data.  HarmeanByPair contains 180 rows and 88 variables. The file can be read in using the following command:
+This code book describes the content of the data set HARmeanByPair, as well as the steps taken to create and tidy the data.  HarmeanByPair contains 180 rows and 88 variables. The file can be read using the following command:
 HARmeanByPair <- read.table(file_path, header = TRUE), where file_path is the path to the downloaded file on the user’s computer.
 
 
@@ -31,65 +31,65 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+* mean(): Mean value
+* std(): Standard deviation
+* mad(): Median absolute deviation 
+* max(): Largest value in array
+* min(): Smallest value in array
+* sma(): Signal magnitude area
+* energy(): Energy measure. Sum of the squares divided by the number of values. 
+* iqr(): Interquartile range 
+* entropy(): Signal entropy
+* arCoeff(): Autorregresion coefficients with Burg order equal to 4
+* correlation(): correlation coefficient between two signals
+* maxInds(): index of the frequency component with largest magnitude
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+* skewness(): skewness of the frequency domain signal 
+* kurtosis(): kurtosis of the frequency domain signal 
+* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+* angle(): Angle between to vectors.
 
 Additional vectors were obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+* gravityMean
+* tBodyAccMean
+* tBodyAccJerkMean
+* tBodyGyroMean
+* tBodyGyroJerkMean
 
 
 For each record the following is provided:
 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
+* Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+* Triaxial Angular velocity from the gyroscope. 
+* A 561-feature vector with time and frequency domain variables. 
+* Its activity label. 
+* An identifier of the subject who carried out the experiment.
 
 Note that:
 
-- Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file.
+* Features are normalized and bounded within [-1,1].
+* Each feature vector is a row on the text file.
  
 
 Steps Taken to Subset and Tidy the Data
@@ -101,21 +101,21 @@ The zip data file, found at URL "https://d396qusza40orc.cloudfront.net/getdata%2
 
 The following files were unzipped and read into a data table:
 
-	XTest: 2947 observations of 561 numeric experimental features (source: X_test.txt)
+	* XTest: 2947 observations of 561 numeric experimental features (source: X_test.txt)
 
-	yTest: 2947 rows containing the integer activity code (1-6) for each XTest observation (source: y_test.txt)
+	* yTest: 2947 rows containing the integer activity code (1-6) for each XTest observation (source: y_test.txt)
 
-	SubjectTest: 2947 rows containing the integer subject code (1-30) for each XTest observation (source: subject_test.txt)
+	* SubjectTest: 2947 rows containing the integer subject code (1-30) for each XTest observation (source: subject_test.txt)
 
-	XTrain: 7352 observations of 561 numeric experimental features (source: X_train.txt)
+	* XTrain: 7352 observations of 561 numeric experimental features (source: X_train.txt)
 
-	yTrain: 7352 rows containing the integer activity code (1-6) for each XTrain observation (source: y_train.txt)
+	* yTrain: 7352 rows containing the integer activity code (1-6) for each XTrain observation (source: y_train.txt)
 
-	SubjectTrain: 7352 rows containing the integer subject code (1-30) for each XTrain observation (source: subject_train.txt)
+	* SubjectTrain: 7352 rows containing the integer subject code (1-30) for each XTrain observation (source: subject_train.txt)
 
-	Features: 561 rows containing the names of the features in XTest and XTrain (source:features.txt)
+	* Features: 561 rows containing the names of the features in XTest and XTrain (source:features.txt)
 	
-  ActivityLabels: 6 rows containing a code/activity_name pair for each activity (source:activity_labels.txt)
+	* ActivityLabels: 6 rows containing a code/activity_name pair for each activity (source:activity_labels.txt)
 
 
 The Features data set was used to create column names (variable names) for each of the 561 features. Next, a “Subject” column containing the subject code (integer 1-30) for each observation was added, as was an “Activity” column containing the activity code (integer 1-6) for each observation and a "DataType" column containing the word “Test” or “Training” to indicate whether the observation originated in the test or training data.
@@ -125,19 +125,20 @@ The test and training data sets were then combined (by row) and the resulting me
 Subsequently, ALL columns with column names that contain the words “mean” or “std” (for standard deviation) or that were named "Subject", "Activity", or "DataType”, were selected, forming a smaller data set with 10,299 observations and 89 columns.  Although there is some ambiguity as to whether variables with names like “angle(X,gravityMean)” should be considered a mean, the decision was made to retain these variables.  The factor columns (Subject, Activity, DataType) were moved to the left side of the data set and the rows were sorted by subject, activity, and datatype. The data was checked for duplicate columns; no duplicates were detected.
 
 Next, column names were expanded to eliminate the abbreviations below. The decision was made to keep all parts of the original variable names so as not to lose information. Because this makes the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, the decision was made to not insert spaces into the variable names. However, the string “()” in some variable names was removed because it can interfere with R processing.
-       ^t   -> Time
+
+       * ^t   -> Time
        
-       ^f   -> Frequency
+       * ^f   -> Frequency
        
-       Acc  -> Acceleration
+       * Acc  -> Acceleration
        
-       Gyro -> AngularVelocity
+       * Gyro -> AngularVelocity
        
-       Mag  -> Magnitude
+       * Mag  -> Magnitude
        
-       angle(t -> angle(Time
+       * angle(t -> angle(Time
        
-       ()   -> removed
+       * ()   -> removed
 
 Lastly, the activity code number was changed to an activity name using the ActivityLabels data set, and underscores were removed. [Example: “2” -> "Walking upstairs”].  In addition, the subject code number was changed to a subject name. [Example: “1” -> "Subject 1”.]
 
@@ -145,7 +146,7 @@ Lastly, the activity code number was changed to an activity name using the Activ
 Intermediate data set HARmean
 =============================
 
-The resulting data set, called HARmean, contains 10,299 observations of 89 variables, including a “DataType” factor variable. See the section below for a list of the remaining variables. Each observation records the measured or derived data collected from the embedded accelerometer and gyroscope in a subject’s Samsung Galaxy S II smartphone.  Measurement units are the same as those in the Experimental Data section described above.
+The resulting intermediate data set, called HARmean, contains 10,299 observations of 89 variables, including a “DataType” factor variable. See the section below for a list of the remaining variables. Each observation records the measured or derived data collected from the embedded accelerometer and gyroscope in a subject’s Samsung Galaxy S II smartphone.  Measurement units are the same as those in the Experimental Data section described above.
 
 If desired, the run_analysis.R script provides optional (commented out) code to write the intermediate data set HARmean to file.
 
@@ -247,7 +248,7 @@ The variables in HARmeanByPair are listed below. Variables beginning with the wo
 [88] "angle(Z,gravityMean)"
 
 
-Instead of individual data observations, HARmeanByPair contains, for each subject/activity pair, the AVERAGE of the observations of a variable for that subject/activity pair.  Because there are 30 subjects and 6 activities, there are a total of 30*6 or 180 rows in HARmeanByPair.
+Instead of individual data observations, HARmeanByPair contains, for each subject/activity pair, the AVERAGE of the observations of a variable for that subject/activity pair.  Because there are 30 subjects and 6 activities, there are a total of 30 x 6 or 180 rows in HARmeanByPair.
 
-The data set HARmeanByPair is written by the script run_analysis.R to the file directory HARdata.  It meets the principles of tidy data as explicated by Hadley Wickham, with one variable per column, one observation per row, descriptive variable names, vectors entries that are character (“Subject 1” “Walking upstairs”) rather than integer codes, no duplicate columns and no duplicate rows, and variables stored only in columns and not in rows.
+The data set HARmeanByPair is written by the script "run_analysis.R" to the file directory HARdata.  It meets the principles of tidy data as explicated by Hadley Wickham, with one variable per column, one observation per row, descriptive variable names, factor column entries that are character (“Subject 1”, “Walking upstairs”) rather than integer codes, no duplicate columns and no duplicate rows, and variables stored only in columns and not in rows.
 
