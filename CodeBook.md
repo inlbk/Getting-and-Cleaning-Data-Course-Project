@@ -9,11 +9,9 @@ Background
 ==========
 One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The experimental data used in generating the data set HARmeanByPair was collected and preserved in the Human Activity Recognition (HAR) database from recordings of subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors.
 
-Experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity data was captured at a constant rate of 50Hz. The experiments were video-recorded and the data was labeled manually. The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+Experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (Walking, Walking upstairs, Walking downstairs, Sitting, Standing, Lying) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity data was captured at a constant rate of 50Hz. The experiments were video-recorded and the data was labeled manually. The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers were selected for generating the training data and 30% the test data. 
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
-
-A full description of the experiment is available at the site where the data was obtained: “http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones”
+A full description of the experiment is available at URL “http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones”
 
 
 Experimental Data
@@ -22,7 +20,7 @@ Experimental Data
 The experimental data is found at the following URL:
 “https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip” 
 
-The features contained in the experimental data come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The smartphone's accelerometer and gyroscope sensors provided 3-axial raw signals tAcc-XYZ and tGyro-XYZ that were captured at a constant rate of 50 Hz. These time domain signals (prefix 't' to denote time) were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter, with a corner frequency of 0.3 Hz because the gravitational force is assumed to have only low frequency components.  The signals were then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
@@ -95,7 +93,7 @@ Note that:
 Steps Taken to Subset and Tidy the Data
 =======================================
 
-From the original experimental data described above, the following steps were taken to subset and tidy the data. For the code implementing these steps, please see the script “run_analysis.R” in this repository.
+From the original experimental data described in the preceding section, the following steps were taken to subset and tidy the data. For the code implementing these steps, please see the script “run_analysis.R” in this repository.
 
 The zip data file, found at URL "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip”, was downloaded and the date and time at which the download occurred was recorded.
 
@@ -122,7 +120,7 @@ The Features data set was used to create column names (variable names) for each 
 
 The test and training data sets were then combined (by row) and the resulting merged data set was checked for duplicates. No duplicate rows were detected.
 
-Subsequently, ALL columns with column names that contain the words “mean” or “std” (for standard deviation) or that were named "Subject", "Activity", or "DataType”, were selected, forming a smaller data set with 10,299 observations and 89 columns.  Although there is some ambiguity as to whether variables with names like “angle(X,gravityMean)” should be considered a mean, the decision was made to retain these variables.  The factor columns (Subject, Activity, DataType) were moved to the left side of the data set and the rows were sorted by subject, activity, and datatype. The data was checked for duplicate columns; no duplicates were detected.
+Subsequently, ALL columns with column names that contain the words “mean” or “std” (for standard deviation) or that were named "Subject", "Activity", or "DataType”, were selected, forming a smaller data set with 10,299 observations and 89 columns.  Although there is some ambiguity as to whether variables with names like “angle(X,gravityMean)” should be considered a mean, the decision was made to retain these variables.  The factor columns (Subject, Activity, DataType) were moved to the left side of the data set and the rows were sorted by subject, activity, and datatype. The data was then checked for duplicate columns; no duplicates were detected.
 
 Next, column names were expanded to eliminate the abbreviations below. The decision was made to keep all parts of the original variable names so as not to lose information. Because this makes the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, the decision was made to not insert spaces into the variable names. However, the string “()” in some variable names was removed because it can interfere with R processing.
 
@@ -146,9 +144,9 @@ Lastly, the activity code number was changed to an activity name using the Activ
 Intermediate data set HARmean
 =============================
 
-The resulting intermediate data set, called HARmean, contains 10,299 observations of 89 variables, including a “DataType” factor variable. See the section below for a list of the remaining variables. Each observation records the measured or derived data collected from the embedded accelerometer and gyroscope in a subject’s Samsung Galaxy S II smartphone.  Measurement units are the same as those in the Experimental Data section described above.
+The resulting intermediate data set, called HARmean, contains 10,299 observations of 89 variables, including a “DataType” factor variable. See the section below for a list of these variables. Each row consists of one observation containing processed data collected from the embedded accelerometer and gyroscope in a subject’s Samsung Galaxy S II smartphone.  
 
-If desired, the run_analysis.R script provides optional (commented out) code to write the intermediate data set HARmean to file.
+The "run_analysis.R" script provides optional (commented out) code to write the intermediate data set HARmean to file if desired.
 
 
 Data set HARmeanByPair
@@ -156,7 +154,7 @@ Data set HARmeanByPair
 
 From the intermediate data set HARmean, a final independent data set called HARmeanByPair was then created. The HARmeanByPair data set contains 88 variables whereas the HARmean data set contains 89 variables. The only difference in the variables between these two data sets is that the “DataType” variable in HARmean has been removed from HARmeanByPair because it is a factor variable and cannot be averaged.  
 
-The variables in HARmeanByPair are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” appear to be measured in radians.
+The variables (each variable contained in one column) in HARmeanByPair are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” appear to be measured in radians.
 
  [1] "Subject"                                               
  [2] "Activity"                                              
@@ -248,7 +246,7 @@ The variables in HARmeanByPair are listed below. Variables beginning with the wo
 [88] "angle(Z,gravityMean)"
 
 
-Instead of individual data observations, HARmeanByPair contains, for each subject/activity pair, the AVERAGE of the observations of a variable for that subject/activity pair.  Because there are 30 subjects and 6 activities, there are a total of 30 x 6 or 180 rows in HARmeanByPair.
+Instead of rows containing individual data observations, each row of HARmeanByPair contains the AVERAGE of the data in each non-factor column (see the variables listed above) for a single subject/activity pair.  Because there are 30 subjects and 6 activities, there are a total of 30 x 6 or 180 rows in HARmeanByPair, one row for each subject/activity pair.
 
 The data set HARmeanByPair is written by the script "run_analysis.R" to the file directory HARdata.  It meets the principles of tidy data as explicated by Hadley Wickham, with one variable per column, one observation per row, descriptive variable names, factor column entries that are character (“Subject 1”, “Walking upstairs”) rather than integer codes, no duplicate columns and no duplicate rows, and variables stored only in columns and not in rows.
 
