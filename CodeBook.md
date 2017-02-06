@@ -99,15 +99,15 @@ The following files were unzipped and read into a data table:
 
 	* XTest: 2947 observations of 561 numeric experimental features (source: X_test.txt)
 
-	* yTest: 2947 rows containing the integer activity code (1-6) for each XTest observation (source: y_test.txt)
+	* yTest: 2947 rows with the activity code (1-6) for each XTest observation (source: y_test.txt)
 
-	* SubjectTest: 2947 rows containing the integer subject code (1-30) for each XTest observation (source: subject_test.txt)
+	* SubjectTest: 2947 rows with the subject code (1-30) for each XTest observation (source: subject_test.txt)
 
 	* XTrain: 7352 observations of 561 numeric experimental features (source: X_train.txt)
 
-	* yTrain: 7352 rows containing the integer activity code (1-6) for each XTrain observation (source: y_train.txt)
+	* yTrain: 7352 rows with the activity code (1-6) for each XTrain observation (source: y_train.txt)
 
-	* SubjectTrain: 7352 rows containing the integer subject code (1-30) for each XTrain observation (source: subject_train.txt)
+	* SubjectTrain: 7352 rows with the subject code (1-30) for each XTrain observation (source: subject_train.txt)
 
 	* Features: 561 rows containing the names of the features in XTest and XTrain (source:features.txt)
 	
