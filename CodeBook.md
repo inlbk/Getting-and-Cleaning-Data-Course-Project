@@ -97,21 +97,21 @@ The zip data file, found at URL "https://d396qusza40orc.cloudfront.net/getdata%2
 
 The following files were unzipped and read into a data table:
 
-	* XTest: 2947 observations of 561 numeric experimental features (source: X_test.txt)
+* XTest: 2947 observations of 561 numeric experimental features (source: X_test.txt)
 
-	* yTest: 2947 rows with the activity code (1-6) for each XTest observation (source: y_test.txt)
+* yTest: 2947 rows with the activity code (1-6) for each XTest observation (source: y_test.txt)
 
-	* SubjectTest: 2947 rows with the subject code (1-30) for each XTest observation (source: subject_test.txt)
+* SubjectTest: 2947 rows with the subject code (1-30) for each XTest observation (source: subject_test.txt)
 
-	* XTrain: 7352 observations of 561 numeric experimental features (source: X_train.txt)
+* XTrain: 7352 observations of 561 numeric experimental features (source: X_train.txt)
 
-	* yTrain: 7352 rows with the activity code (1-6) for each XTrain observation (source: y_train.txt)
+* yTrain: 7352 rows with the activity code (1-6) for each XTrain observation (source: y_train.txt)
 
-	* SubjectTrain: 7352 rows with the subject code (1-30) for each XTrain observation (source: subject_train.txt)
+* SubjectTrain: 7352 rows with the subject code (1-30) for each XTrain observation (source: subject_train.txt)
 
-	* Features: 561 rows containing the names of the features in XTest and XTrain (source:features.txt)
+* Features: 561 rows containing the names of the features in XTest and XTrain (source:features.txt)
 	
-	* ActivityLabels: 6 rows containing a code/activity_name pair for each activity (source:activity_labels.txt)
+* ActivityLabels: 6 rows containing a code/activity_name pair for each activity (source:activity_labels.txt)
 
 
 The Features data set was used to create column names (variable names) for each of the 561 features. Next, a “Subject” column containing the subject code (integer 1-30) for each observation was added, as was an “Activity” column containing the activity code (integer 1-6) for each observation and a "DataType" column containing the word “Test” or “Training” to indicate whether the observation originated in the test or training data.
@@ -122,19 +122,19 @@ Subsequently, ALL columns with column names that contain the words “mean” or
 
 Next, column names were expanded to eliminate the abbreviations below. The decision was made to keep all parts of the original variable names so as not to lose information. Because this makes the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, the decision was made to not insert spaces into the variable names. However, the string “()” in some variable names was removed because it can interfere with R processing.
 
-       * ^t   -> Time
+* ^t   -> Time
        
-       * ^f   -> Frequency
+* ^f   -> Frequency
        
-       * Acc  -> Acceleration
+* Acc  -> Acceleration
        
-       * Gyro -> AngularVelocity
+* Gyro -> AngularVelocity
        
-       * Mag  -> Magnitude
+* Mag  -> Magnitude
        
-       * angle(t -> angle(Time
+* angle(t -> angle(Time
        
-       * ()   -> removed
+* ()   -> removed
 
 Lastly, the activity code number was changed to an activity name using the ActivityLabels data set, and underscores were removed. [Example: “2” -> "Walking upstairs”].  In addition, the subject code number was changed to a subject name. [Example: “1” -> "Subject 1”.]
 
