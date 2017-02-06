@@ -123,21 +123,15 @@ Subsequently, ALL columns with column names that contain the words “mean” or
 
 Next, column names were expanded to eliminate the abbreviations below. The decision was made to keep all parts of the original variable names so as not to lose information. Because this makes the names quite long and because the inclusion of additional spaces might interfere with future processing of the data using non-R software, the decision was made to not insert spaces into the variable names. However, the string “()” in some variable names was removed because it can interfere with R processing.
 
-String | Replacement
--------|------------
-* ^t | Time
-       
-* ^f | Frequency
-       
-* Acc | Acceleration
-       
-* Gyro | AngularVelocity
-       
-* Mag | Magnitude
-       
-* angle(t | angle(Time
-       
-* () | removed
+Abbreviation | Replacement
+-------------|------------
+^t | Time
+^f | Frequency
+Acc | Acceleration   
+Gyro | AngularVelocity  
+Mag | Magnitude   
+angle(t | angle(Time     
+() | removed
 
 Lastly, the activity code number was changed to an activity name using the ActivityLabels data set, and underscores were removed. [Example: “2” -> "Walking upstairs”].  In addition, the subject code number was changed to a subject name. [Example: “1” -> "Subject 1”.]
 
