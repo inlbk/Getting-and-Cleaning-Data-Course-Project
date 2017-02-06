@@ -7,7 +7,7 @@ HARmeanByPair <- read.table(file_path, header = TRUE), where file_path is the pa
 
 Background
 ==========
-One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The experimental data used in generating the data set HARmeanByPair was collected in the Human Activity Recognition (HAR) database from recordings of subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors.
+One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The experimental data used in generating the data set HARmeanByPair was collected and preserved in the Human Activity Recognition (HAR) database from recordings of subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors.
 
 Experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity data was captured at a constant rate of 50Hz. The experiments were video-recorded and the data was labeled manually. The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
