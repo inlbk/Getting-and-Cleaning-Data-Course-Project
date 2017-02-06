@@ -14,8 +14,8 @@ Experiments were carried out with a group of 30 volunteers within an age bracket
 A full description of the experiment is available at URL “http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones”
 
 
-Experimental Data
-=================
+Experimental Data Set
+=====================
 
 The experimental data is found at the following URL:
 “https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip” 
@@ -91,7 +91,7 @@ Note that:
 Steps Taken to Subset and Tidy the Data
 =======================================
 
-From the original experimental data described in the preceding section, the following steps were taken to subset and tidy the data. For the code implementing these steps, please see the script “run_analysis.R” in this repository.
+From the complete set of experimental data described in the preceding section, the following steps were taken to subset and tidy the data. For the code implementing these steps, please see the script “run_analysis.R” in this repository.
 
 The zip data file, found at URL "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip”, was downloaded and the date and time at which the download occurred was recorded.
 
@@ -152,7 +152,7 @@ Data Set "HARmeanByPair"
 
 From the intermediate data set HARmean, a final independent data set called HARmeanByPair was then created. The HARmeanByPair data set contains 88 variables whereas the HARmean data set contains 89 variables. The only difference in the variables between these two data sets is that the “DataType” variable in HARmean has been removed from HARmeanByPair because it is a factor variable and cannot be averaged.  
 
-The variables in each column of HARmeanByPair (one variable per column) are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” appear to be measured in radians.
+The variables in each column of HARmeanByPair (one variable per column) are listed below. Variables beginning with the word “Time” are measured in seconds, variables beginning with “Frequency” are measured in Hertz, and variables beginning with “angle” are measured in radians.
 
  [1] "Subject"  (factor)                                             
  [2] "Activity" (factor)                                            
