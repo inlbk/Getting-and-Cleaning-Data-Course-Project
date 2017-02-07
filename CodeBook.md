@@ -1,8 +1,7 @@
 CODE BOOK
 =========================================
 
-This code book describes the content of the data set HARmeanByPair, as well as the steps taken to create and tidy the data.  HarmeanByPair contains 180 rows and 88 variables. The file can be read using the following command:
-HARmeanByPair <- read.table(file_path, header = TRUE), where file_path is the path to the downloaded file on the user’s computer.
+This code book describes the content of the data set HARmeanByPair, as well as the steps taken to create and tidy the data.  HarmeanByPair contains 180 rows and 88 variables.  The first two variables in each row ("Subject" and "Activity") are factor variables; the remaining variables contain the average for a particular subject/activity pair of each of the column variables described below. The file can be read using the following command: HARmeanByPair <- read.table("file_path", header = TRUE), where "file_path" is the path to the downloaded file on the user’s computer.
 
 
 Background
